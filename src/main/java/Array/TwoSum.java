@@ -7,13 +7,33 @@
  */
 package Array;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
 /**
  * @author zhangjundong
  * @date 2019/8/923:37
  */
 public class TwoSum {
 
-    public static void main(String[] args) {
+    public int[] twosum(int[] nums,int target){
+        HashMap<Integer,Integer> hashMap=new HashMap<Integer, Integer>();
 
+        for(int i=0;i<nums.length;i++){
+            Integer remain=target-nums[i];
+            if(hashMap.containsKey(remain)){
+                return new int[]{hashMap.get(remain),i};
+            }
+            hashMap.put(nums[i],i);
+        }
+        return null;
+    }
+
+
+    public static void main(String[] args) {
+        int[] nums=new int[]{2,7,11,15};
+        int target=9;
+        int[] result= new TwoSum().twosum(nums,target);
+        System.out.println(Arrays.toString(result));
     }
 }
