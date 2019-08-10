@@ -16,6 +16,16 @@ import java.util.HashMap;
  */
 public class TwoSum {
 
+    /**
+     * Description:
+     * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+     * You may assume that each input would have exactly one solution, and you may not use the same element twice.
+     * Solutions:
+     * Time Complexity:O(n)    Space Complexity:O(n)
+     * @param nums
+     * @param target
+     * @return
+     */
     public int[] twosum(int[] nums,int target){
         HashMap<Integer,Integer> hashMap=new HashMap<Integer, Integer>();
 
