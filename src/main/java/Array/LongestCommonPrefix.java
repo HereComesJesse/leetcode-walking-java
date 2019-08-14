@@ -37,9 +37,29 @@ public class LongestCommonPrefix {
         return prefix;
     }
 
+
     public static void main(String[] args) {
         String[] str=new String[]{"flower","flow","flight"};
         String output=new LongestCommonPrefix().longestCommonPrefix(str);
         System.out.println(output);
+
+        String[] str1=new String[]{"flower","","flight"};
+        String output1=new LongestCommonPrefix().longestCommonPrefix1(str1);
+        System.out.println(output1);
+    }
+
+    public String longestCommonPrefix1(String[] strs){
+        if(strs==null || strs.length==0){
+            return "";
+        }
+        for (int i=0;i<strs[0].length();i++){
+            char prefix=strs[0].charAt(i);
+            for (int j=1;j<strs.length;j++){
+                if(strs[j].length()==i || strs[j].charAt(i)!=prefix){
+                    return strs[0].substring(0,i);
+                }
+            }
+        }
+        return strs[0];
     }
 }
