@@ -17,6 +17,16 @@ import java.util.Set;
  * @date 2019/8/1623:20
  */
 public class RemoveDuplicates {
+    /**
+     * Description:
+     * Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+     *
+     * Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+     * Solutions:
+     * Time Complexity:O(n)    Space Complexity:O(1)
+     * @param nums
+     * @return
+     */
     public int removeDuplicates(int[] nums){
         if(nums.length==0){
             return 0;
